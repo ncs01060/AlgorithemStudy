@@ -13,7 +13,7 @@ def check(numbers,current,visited,prime:set):
                     prime.add(int(current))
             check(numbers,current,visited,prime)
             visited[i] = False
-            current = current[:-1]     
+            current = current[:-1]
     return prime
     
 
@@ -22,4 +22,5 @@ def solution(numbers):
     visited = [False] * len(numbers)
     answer = check(numbers, "",visited,prime)
     return len(answer)
-print(solution("17"))
+
+#print(solution("17"))
